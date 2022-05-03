@@ -12,7 +12,7 @@ const TemplateName = (props) => {
     return (
         <div className={style.TemplateName} data-testid="TemplateName">
             TemplateName
-            <br /> {JSON.stringify()}{" "}
+            <br /> {JSON.stringify()}
         </div>
     );
 };
