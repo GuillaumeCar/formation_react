@@ -1,16 +1,39 @@
-import React from 'react';
-import './App.css';
-import Button from './components/ui/Button/Button';
+import React, { Component } from "react";
+import Button from "./components/ui/Button/Button";
 
-function App() {
-  return (
-    <div className="App">
-      {/* <Button text="Aaaa"/> */}
-      <Button>Text child</Button>
-      <Button><div>Ouiiiii</div></Button>
-      <Button><div>Ouiiiii</div><div>Ouiiiii</div></Button>
-    </div>
-  );
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { count: 1, title: "titre" };
+    }
+
+    componentDidUpdate(oldProps, oldState) {
+        console.log("---", oldState, this.state);
+    }
+
+    render() {
+        return (
+            <div className="App">
+                Valeur du compteur : {this.state.count}
+                <Button
+                    onButtonClick={() => {
+                        this.setState({ count: this.state.count + 1 });
+                    }}
+                    bgColor="skyblue"
+                >
+                    Add
+                </Button>
+                <Button
+                    onButtonClick={() => {
+                        this.setState({ count: this.state.count - 1 });
+                    }}
+                    bgColor="skyblue"
+                >
+                    Substract
+                </Button>
+            </div>
+        );
+    }
 }
 
 export default App;
