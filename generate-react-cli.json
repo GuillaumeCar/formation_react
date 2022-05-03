@@ -10,6 +10,36 @@
       "withTest": true,
       "withStory": false,
       "withLazy": false
+    },
+    "layout": {
+      "path": "src/App/components/layout",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": false,
+      "withLazy": false,
+      "customTemplates": {
+        "component": "grc/layoutFunc/TemplateName.js"
+      }
+    },
+    "ui": {
+      "path": "src/App/components/ui",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": false,
+      "withLazy": false,
+      "customTemplates": {
+        "component": "grc/func/TemplateName.js"
+      }
+    },
+    "functional": {
+      "path": "src/App/components/functional",
+      "withStyle": true,
+      "withTest": true,
+      "withStory": false,
+      "withLazy": false,
+      "customTemplates": {
+        "component": "grc/func/TemplateName.js"
+      }
     }
   }
 }

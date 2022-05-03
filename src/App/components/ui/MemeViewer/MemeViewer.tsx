@@ -4,11 +4,11 @@ import style from "./MemeViewer.module.css";
 import { I_Image, I_Meme } from "../../../interfaces/common";
 
 
-interface I_MemeVieverProps {
+interface I_MemeViewerProps {
   meme: I_Meme;
   image: I_Image | undefined;
 }
-const MemeViewer: React.FC<I_MemeVieverProps> = (props) => {
+const MemeViewer: React.FC<I_MemeViewerProps> = (props) => {
   return (
     <svg
       className={style.MemeViewer}
