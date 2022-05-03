@@ -1,10 +1,25 @@
 import React, { Component } from "react";
 import Button from "./components/ui/Button/Button";
+import { API_URI } from "./config/config";
 
 class App extends Component {
     constructor(props) {
         super(props);
-        this.state = { count: 1, title: "titre" };
+        this.state = { memes: [], images: [] };
+    }
+
+    componentDidMount() {
+        const memesRequest = fetch(API_URI + "/memes").then((res) =>
+            res.json()
+        );
+
+        const imagesRequest = fetch(API_URI + "/images").then((res) =>
+            res.json()
+        );
+
+        Promise.all([memesRequest, imagesRequest]).then((res) => {
+            this.setState({ memes: res[0], images: res[1] });
+        });
     }
 
     componentDidUpdate(oldProps, oldState) {
@@ -12,27 +27,7 @@ class App extends Component {
     }
 
     render() {
-        return (
-            <div className="App">
-                Valeur du compteur : {this.state.count}
-                <Button
-                    onButtonClick={() => {
-                        this.setState({ count: this.state.count + 1 });
-                    }}
-                    bgColor="skyblue"
-                >
-                    Add
-                </Button>
-                <Button
-                    onButtonClick={() => {
-                        this.setState({ count: this.state.count - 1 });
-                    }}
-                    bgColor="skyblue"
-                >
-                    Substract
-                </Button>
-            </div>
-        );
+        return <div className="App">{JSON.stringify(this.state)}</div>;
     }
 }
 

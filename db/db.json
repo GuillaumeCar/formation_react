@@ -1,0 +1,67 @@
+{
+  "memes": [
+    {
+      "id": 0,
+      "text": "Oui",
+      "titre": "Mais nan",
+      "x": 100,
+      "y": 100,
+      "fontSize": 12,
+      "fontWeight": 700,
+      "color": "#ADE0FA",
+      "underline": false,
+      "italic": false,
+      "imageId": 0
+    },
+    {
+      "text": "Woohooo",
+      "titre": "Incroyable",
+      "x": 100,
+      "y": 100,
+      "fontSize": 12,
+      "fontWeight": 700,
+      "color": "#ADE0FA",
+      "underline": false,
+      "italic": false,
+      "imageId": 0,
+      "id": 1
+    }
+  ],
+  "images": [
+    {
+      "id": 0,
+      "titre": "elon",
+      "href": "elon.jpg",
+      "w": "663",
+      "h": "377"
+    },
+    {
+      "id": 1,
+      "titre": "indestructibles",
+      "href": "indestructible.jpg",
+      "w": "598",
+      "h": "500"
+    },
+    {
+      "id": 2,
+      "titre": "dentist",
+      "href": "painless.jpg",
+      "w": "493",
+      "h": "800"
+    },
+    {
+      "id": 3,
+      "titre": "poutine_stress",
+      "href": "poutine_stress.jpg",
+      "w": "1125",
+      "h": "1466"
+    },
+    {
+      "id": 4,
+      "titre": "showtime",
+      "href": "showtime.jpg",
+      "w": "700",
+      "h": "394"
+    }
+  ]
+}
